@@ -1,2 +1,2 @@
 # erickvieira
-Minha mágina Web
+Minha biografia
