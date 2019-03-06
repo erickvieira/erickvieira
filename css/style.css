@@ -1,0 +1,9 @@
+.background {
+  background-color: black;
+  background-image: url('https://s3.r29static.com//bin/entry/1fb/720x864,85/1827251/image.webp');
+  background-origin: content-box;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
