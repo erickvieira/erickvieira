@@ -1,2 +1,0 @@
-# erickvieira
-Minha biografia
