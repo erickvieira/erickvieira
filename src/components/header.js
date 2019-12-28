@@ -1,16 +1,14 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useRef, useEffect } from "react"
-import { TweenMax } from "gsap"
 
+import { easeIn } from '../services/prebuilt-individual-animations.service'
 
 const Header = ({ siteTitle }) => {
   let headerRef = useRef(null)
 
   useEffect(() => {
-    TweenMax.to(headerRef, 2, {
-      opacity: 1
-    })
+    easeIn(headerRef)
   }, [])
 
   return (
@@ -18,8 +16,7 @@ const Header = ({ siteTitle }) => {
       ref={ element => { headerRef = element } }
       style={{
         background: `rebeccapurple`,
-        marginBottom: `1.45rem`,
-        opacity: 0
+        marginBottom: `1.45rem`
       }}
     >
       <div
