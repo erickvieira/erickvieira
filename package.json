@@ -15,7 +15,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d public",
-    "postbuild": "mv -f public/ docs/"
+    "postbuild": "rm -rf docs/ && mv -f public/ docs/ && cp CNAME docs/static"
   },
   "dependencies": {
     "gatsby": "^2.18.12",
