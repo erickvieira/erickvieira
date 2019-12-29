@@ -1,0 +1,14 @@
+html, body {
+    background: var(--color-secondary) !important;
+    color: white;
+    font-family: 'Fira Sans';
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--color-primary);
+    padding: 20px;
+}

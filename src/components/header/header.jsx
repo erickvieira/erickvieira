@@ -21,7 +21,7 @@ class Header extends React.Component {
       <header
         ref={ element => { this.headerRef = element } }
         style={{
-          background: `rebeccapurple`,
+          background: `var(--color-primary)`,
           marginBottom: `1.45rem`
         }}
       >

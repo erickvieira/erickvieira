@@ -1,1 +1,7 @@
-@import '~bulma/bulma';
+@import '~normalize.css';
+
+:root {
+    --color-primary: #DB3844;
+    --color-primary-rgb: 219, 57, 68;
+    --color-secondary: #090816;
+}

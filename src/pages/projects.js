@@ -71,7 +71,7 @@ class Projects extends React.Component {
 								margin: 8,
 								padding: '16px 2px',
 								borderRadius: 8,
-								color: '#333'
+								background: 'rgba(var(--color-primary-rgb), .05)'
 							}} key={ i.toString() }>
 								<h4>
 									{p.name}

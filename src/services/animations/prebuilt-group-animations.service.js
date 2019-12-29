@@ -4,7 +4,6 @@ import { Bounce, SlowMo } from 'gsap/all'
 export function popIn(targets) {
     tl().staggerFromTo(targets, .2, {
         y: 5,
-        background: '#eee',
         opacity: 0,
         scale: 0.5,
         ease: Bounce.easeOut,
