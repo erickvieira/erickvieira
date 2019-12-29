@@ -1,8 +1,8 @@
 import React from 'react';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout from 'components/layout';
+import SEO from 'components/seo';
 
-import { popIn } from '../services/prebuilt-group-animations.service'
+import { popIn } from 'services/animations/prebuilt-group-animations.service'
 
 const myProjects = [{
 	name: 'Watermalon',
@@ -51,7 +51,7 @@ class Projects extends React.Component {
 		return (
 			<Layout>
 				<SEO title="Projects" />
-				<h1>Projects</h1>
+				<h1 className="title">Meus Projetos</h1>
 				<hr/>
 				<p>Alguns projetos pessoais</p>
 				<section style={{
@@ -68,11 +68,9 @@ class Projects extends React.Component {
 								flex: 2,
 								minWidth: 250,
 								textAlign: "center",
-								background: '#eee',
 								margin: 8,
 								padding: '16px 2px',
 								borderRadius: 8,
-								boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
 								color: '#333'
 							}} key={ i.toString() }>
 								<h4>
