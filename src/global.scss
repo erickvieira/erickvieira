@@ -1,7 +1,29 @@
 @import '~normalize.css';
 
+html {
+    height: 100vh;
+    min-width: 300px;
+}
+
+@font-face {
+    font-family: OperatorMono;
+    src: url("./assets/fonts/OperatorMono/OperatorMono-Book.otf") format("opentype");
+}
+@font-face {
+    font-family: OperatorMonoItalic;
+    font-style: italic;
+    src: url("./assets/fonts/OperatorMono/OperatorMono-BookItalic.otf") format("opentype");
+}
+
 :root {
     --color-primary: #DB3844;
     --color-primary-rgb: 219, 57, 68;
-    --color-secondary: #090816;
+    --color-secondary: #100e25;
+    --color-secondary-rgb: 16, 14, 37;
+    --color-tertiary: #f1d4d6;
+
+    --color-evidence: #c2bdfa;
+    --color-evidence-rgb: 194, 189, 250;
+
+    --nav-size: 50px;
 }

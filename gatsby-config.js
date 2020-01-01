@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    navigating: false,
     title: `Erick Vieira`,
     description: `A Software Engineer falling in love with JavaScript <3`,
     author: `@erickvieira`,
@@ -20,6 +21,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -29,7 +31,7 @@ module.exports = {
         background_color: `#0F0E21`,
         theme_color: `#DB3844`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

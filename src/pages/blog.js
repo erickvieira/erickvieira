@@ -1,7 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Layout from 'components/layout/layout'
 import SEO from '../components/seo/seo';
+import { StorageContext, appStorage } from '../contexts/storage/storage.context';
 
 const propTypes = {};
 
@@ -15,9 +15,11 @@ export default class Blog extends React.Component {
 
 	render() {
 		return (
-			<Layout>
-				<SEO title="Blog" keywords="blog"/>
-			</Layout>
+			<StorageContext.Provider value={ appStorage }>
+				<Layout>
+					<SEO title="Blog" keywords="blog"/>
+				</Layout>
+			</StorageContext.Provider>
 		);
 	}
 }

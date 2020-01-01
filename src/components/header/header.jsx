@@ -13,37 +13,17 @@ class Header extends React.Component {
   }
 
 	componentDidMount() {
-    getInVer(this.headerRef)
+    // getInVer(this.headerRef)
 	}
 
   render() {
     return (
-      <header
-        ref={ element => { this.headerRef = element } }
-        style={{
-          background: `var(--color-primary)`,
-          marginBottom: `1.45rem`
-        }}
-      >
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `1.45rem 1.0875rem`,
-          }}
-        >
-          <h1 className="title" style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-              }}
-            >
-              {this.props.siteTitle}
-            </Link>
-          </h1>
-        </div>
+      <header>
+        <pre className="header-pre">
+          <code className="html">
+            {`<html>\n  <body>`}
+          </code>
+        </pre>
       </header>
     )
   }

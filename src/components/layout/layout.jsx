@@ -5,15 +5,34 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useContext, useState, useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "../header"
+import Navbar from "components/navbar"
 import "global.scss"
 import "./layout.scss"
+import { StorageContext } from "contexts/storage/storage.context"
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
+  const aws = useContext(StorageContext)
+  const [navStatus, setNavStatus] = useState()
+  const [navCount, setNavCount] = useState()
+  
+  useEffect(() => {
+    (async () => {
+      await aws.set('navigating', false);
+      const navigating = await aws.find('navigating')
+      const navCount = await aws.find('navCount')
+      setTimeout(async () => {
+        setNavStatus(navigating || false)
+        console.log(await aws.find('navigating'))
+      }, 2000);
+      setNavCount(navCount)
+    })()
+  }, [])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,18 +45,33 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Navbar />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          float: "right",
+          width: `calc(100vw - var(--nav-size) - 60px)`,
+          height: `calc(100vh - 68px - 86px)`,
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
         <footer>
-          github.com/erickvieira
+          <pre>
+            <code className="html">
+              {`  </body>\n</html>`}
+            </code>
+            <code className="html comment">
+              {`\n<!-- confira mais no meu `}
+              <a href="https://github.com/erickvieira">GitHub</a> | &copy; {(new Date()).getFullYear()}
+              {` -->`}
+            </code>
+          </pre>
         </footer>
       </div>
     </>
