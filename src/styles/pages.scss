@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  display: flex;
+
+  .col {
+    flex: 1;
+
+    &.description {
+      max-width: 60%;
+
+      @media screen and (max-width: 500px) {
+        max-width: 100%;
+        word-wrap: break-word;
+      }
+    }
+
+    &.figure {
+      position: fixed !important;
+      bottom: 86px !important;
+      right: 10px !important;
+    }
+  }
+}
+
+.main-title {
+  font-size: 28px;
+}

@@ -6,10 +6,17 @@ import Signature from "components/signature"
 import { Link } from "gatsby"
 import { StorageContext, appStorage } from "contexts/storage/storage.context"
 
+import '../styles/pages.scss'
+
 class IndexPage extends React.Component {
 
   constructor(props) {
     super(props)
+  }
+
+  get age() {
+    const age = new Date(Date.now() - (new Date('1998-10-03')).getTime());
+    return Math.abs(age.getUTCFullYear() - 1970);
   }
 
   render() {
@@ -18,27 +25,27 @@ class IndexPage extends React.Component {
         <Layout>
           <SEO title="Home" />
           <div className="container">
-            <div className="col left">
-              <h4 className="title">Erick Vieira</h4>
-              <p className="subtitle">
-              {`Sou um Engenheiro de Software apaixonado pela web e focado em me tornar 
-              uma referência em tecnoligias baseadas em JavaScript.`}
-              </p>
-              <p className="title">
-              Desenvolvedor Web e Mobile desde 2017.
-              </p>
-              <p>
-              Confira alguns dos meus 
-              <Link to="/projects" onClick={async () => {
-                let count = await appStorage.find('navCount') || 0
-                appStorage.set('navigating', true)
-                appStorage.set('navCount', count++)
-              }}>
-              projetos
-              </Link>
-              </p>
+            <div className="col description">
+              <pre className="brush: json">
+                <code>
+{`const softwareEngineer = { 
+  "name": "Erick", 
+  "age": ${this.age}, 
+  "from": "Goiânia, Brazil",
+  "devSkills": [
+    "JavaScript ES6",
+    "Angular 2+",
+    "Ionic 3 & 4",
+    "StencilJS",
+    "React",
+    "Gatsby",
+    "NodeJS"
+  ]
+}`}
+                </code>
+              </pre>
             </div>
-            <div className="col right">
+            <div className="col figure">
               <Signature />
             </div>
           </div>

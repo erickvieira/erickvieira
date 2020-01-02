@@ -1,10 +1,5 @@
 @import '~normalize.css';
 
-html {
-    height: 100vh;
-    min-width: 300px;
-}
-
 @font-face {
     font-family: OperatorMono;
     src: url("./assets/fonts/OperatorMono/OperatorMono-Book.otf") format("opentype");
@@ -12,7 +7,7 @@ html {
 @font-face {
     font-family: OperatorMonoItalic;
     font-style: italic;
-    src: url("./assets/fonts/OperatorMono/OperatorMono-BookItalic.otf") format("opentype");
+    src: url("./assets/fonts/OperatorMono/OperatorMono-BoldItalic.otf") format("opentype");
 }
 
 :root {
@@ -20,10 +15,17 @@ html {
     --color-primary-rgb: 219, 57, 68;
     --color-secondary: #100e25;
     --color-secondary-rgb: 16, 14, 37;
+    --color-secondary-tint: #06050c;
     --color-tertiary: #f1d4d6;
 
     --color-evidence: #c2bdfa;
     --color-evidence-rgb: 194, 189, 250;
 
     --nav-size: 50px;
+}
+
+html {
+    height: 100vh;
+    min-width: 300px;
+    font-family: OperatorMono;
 }

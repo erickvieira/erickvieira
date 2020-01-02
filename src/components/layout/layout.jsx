@@ -58,9 +58,7 @@ function Layout({ children }) {
           paddingTop: 0,
         }}
       >
-        <main>
-          {children}
-        </main>
+        {children}
         <footer>
           <pre>
             <code className="html">

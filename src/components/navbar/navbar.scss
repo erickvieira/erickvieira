@@ -6,8 +6,14 @@
   width: var(--nav-size);
   background-color: var(--color-primary);
 
+  hr {
+    width: 40%;
+    margin: 0 auto;
+    size: .5px;
+    color: var(--color-secondary);
+  }
+
   .nav-home {
-    background-color: rgba(var(--color-secondary-rgb), .8);
     padding: 4px;
   }
 }
