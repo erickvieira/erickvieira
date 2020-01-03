@@ -6,14 +6,71 @@
   width: var(--nav-size);
   background-color: var(--color-primary);
 
-  hr {
-    width: 40%;
-    margin: 0 auto;
-    size: .5px;
-    color: var(--color-secondary);
-  }
-
   .nav-home {
     padding: 4px;
+    position: fixed;
   }
+
+  .nav-footer {
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 0;
+      font-size: .6em;
+      text-decoration: none !important;
+
+      .social {
+        color: white;
+      }
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+
+  .nav-pages {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--nav-size);
+      width: var(--nav-size);
+      font-size: .6em;
+      cursor: pointer;
+      text-decoration: none !important;
+      transition: all .3s ease-out;
+
+      .page {
+        color: white;
+      }
+
+      &:hover {
+        background-color: var(--color-secondary);
+
+        .page {
+          color: var(--color-primary);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+hr {
+  width: 40%;
+  margin: 0 auto;
+  size: .5px;
+  color: var(--color-secondary);
 }
